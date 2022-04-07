@@ -1,0 +1,5 @@
+`Prerequisite to run program
+
+flask
+Flask-SQLAlchemy
+flask-login
