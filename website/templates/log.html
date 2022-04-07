@@ -1,0 +1,58 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+    %}
+    <!-- extend base html -->
+<table id="books" class="table table-stripped" style="margin-top:50px;">
+    <!-- table peminjam -->
+    <thead>
+        <h3>
+            Book Borrow Log
+        </h3>
+      <tr>
+        <th>Book ID</th>
+        <th>Borrower ID</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+        <!-- loop -->
+      {% for row in container %}
+        <tr>
+          <td>{{row.bookId}}</td>
+          <td>{{row.userId}}</td>
+          <td>{{row.date}}</td>
+          
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+
+    <table id="books" class="table table-stripped" style="margin-top:50px;">
+        <!-- table pembalik -->
+        <thead>
+            <h3>
+                Book Return Log
+            </h3>
+          <tr>
+            <th>Book ID</th>
+            <th>Borrower ID</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+            <!-- loop -->
+          {% for row in container2 %}
+            <tr>
+              <td>{{row.bookId}}</td>
+              <td>{{row.userId}}</td>
+              <td>{{row.date}}</td>
+              
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+    
+        
+
+
+
+  {% endblock %}
